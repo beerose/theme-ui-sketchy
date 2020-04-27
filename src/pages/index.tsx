@@ -9,7 +9,6 @@ import {
   FontFamily,
 } from "@theme-ui/style-guide"
 
-import Lorem from "../components/lorem.mdx"
 import Components from "../components/components.mdx"
 
 const ThemeJson = () => {
@@ -39,6 +38,7 @@ export default () => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat:400,700|Poppins:400,700,900|Roboto:400,600"
         />
+        <link rel="icon" href={favicon} />
       </Helmet>
       <div
         sx={{

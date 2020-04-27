@@ -1,6 +1,4 @@
-<h1 align="center">
-  ThemeUI Sketchy Preset
-</h1>
+# ThemeUI Sketchy Preset
 
 ## 🚀 Quick start
 
