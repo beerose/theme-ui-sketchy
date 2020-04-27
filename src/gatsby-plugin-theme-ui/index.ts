@@ -52,6 +52,9 @@ const theme = {
     monospace: "Menlo, monospace",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  sizes: {
+    container: 800,
+  },
   lineHeights: {
     body: 1.5,
     heading: 1.25,
@@ -63,12 +66,6 @@ const theme = {
     sketchy3: "225px 15px 15px / 15px 225px",
     sketchy4: "80px 15px 105px / 25px 250px",
     circle: "200px 185px 160px / 195px 160px",
-  },
-  layout: {
-    container: {
-      borderRadius: "sketchy1",
-      backgroundColor: "gray",
-    },
   },
   styles: {
     root: {

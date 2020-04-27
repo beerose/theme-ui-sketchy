@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, components, useThemeUI } from "theme-ui"
+import { jsx, Styled, components, useThemeUI, Container } from "theme-ui"
 import { Helmet } from "react-helmet"
 
 import {
@@ -39,12 +39,11 @@ export default () => {
           href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat:400,700|Poppins:400,700,900|Roboto:400,600"
         />
       </Helmet>
-      <div
+      <Container
         sx={{
           "*": {
             transition: "all .2s ease-out",
           },
-          margin: 40,
         }}
       >
         <Styled.root>
@@ -60,7 +59,7 @@ export default () => {
           <Styled.h2>Raw JSON</Styled.h2>
           <ThemeJson />
         </Styled.root>
-      </div>
+      </Container>
     </div>
   )
 }
