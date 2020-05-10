@@ -27,6 +27,21 @@ const App = props => (
 )
 ```
 
+It can be also extended or modified:
+
+```ts
+import sketchy from 'theme-ui-sketchy-preset'
+
+const myTheme = {
+    ...sketchy,
+    colors: {
+        text: '#000',
+        background: '#fff',
+        primary: '#33e',
+    },
+}
+```
+
 ## 🚀 Development quick start
 
 1.  **Clone the repository**
