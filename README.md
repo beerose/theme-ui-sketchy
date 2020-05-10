@@ -1,7 +1,7 @@
 # Theme UI Sketchy Preset
 
 <p align="center">
-<img width="544" alt="Screenshot 2020-04-28 at 21 13 52" src="https://user-images.githubusercontent.com/9019397/80527806-3de87b80-8995-11ea-96f0-feed7ba966d9.png">
+<img width="500" alt="Screenshot 2020-04-28 at 21 13 52" src="https://user-images.githubusercontent.com/9019397/81507987-6fe8ce80-9301-11ea-8943-d385e5b9e5f9.png">
 <p>
 
 For detailed specification check out [the demo page](https://themeui-sketchy.netlify.app/).
@@ -17,11 +17,12 @@ npm i theme-ui-sketchy-preset # yarn add theme-ui-sketchy-preset
 This library exports the theme object complaiant with [Theme UI theme specification](https://styled-system.com/theme-specification/) that can be passed to your theme provider.
 
 ```tsx
+import { ThemeProvider } from 'theme-ui'
 import sketchy from 'theme-ui-sketchy-preset'
 
-const App = () => (
+const App = props => (
     <ThemeProvider theme={sketchy}>
-        {...}
+        {props.children}
     </ThemeProvider>
 )
 ```
