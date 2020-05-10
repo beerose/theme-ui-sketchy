@@ -1,4 +1,4 @@
-# ThemeUI Sketchy Preset
+# Theme UI Sketchy Preset
 
 <p align="center">
 <img width="544" alt="Screenshot 2020-04-28 at 21 13 52" src="https://user-images.githubusercontent.com/9019397/80527806-3de87b80-8995-11ea-96f0-feed7ba966d9.png">

@@ -1,7 +1,7 @@
 {
-  "name": "themeui-sketchy-preset",
-  "private": true,
-  "description": "ThemeUI Sketchy Preset",
+  "name": "theme-ui-sketchy-preset",
+  "private": false,
+  "description": "Theme UI Sketchy Preset",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
