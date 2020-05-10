@@ -41,7 +41,7 @@ export default () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sketchy ThemeUI Preset — Demo" />
         <meta
-          name="twitter:image"
+          name="og:image"
           content="https://user-images.githubusercontent.com/9019397/81499999-8413d800-92cf-11ea-990b-d331f6b97a4d.png"
         />
         <meta name="twitter:creator" content="@aleksandrasays" />
