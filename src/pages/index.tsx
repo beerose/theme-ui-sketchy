@@ -47,6 +47,9 @@ export default () => {
         }}
       >
         <Styled.root>
+          <Styled.h1 sx={{ textAlign: "center", fontSize: "3em" }}>
+            Sketchy ThemeUI Preset
+          </Styled.h1>
           <Styled.h1>Colors</Styled.h1>
           <ColorPalette omit={["modes", "header"]} />
           <Components />
