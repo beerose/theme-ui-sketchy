@@ -4,6 +4,18 @@
   "description": "ThemeUI Sketchy Preset",
   "version": "0.1.0",
   "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/gatsby-plugin-theme-ui/index.ts",
+  "types": "dist/gatsby-plugin-theme-ui/index.d.ts",
+  "module": "dist/gatsby-plugin-theme-ui/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beerose/theme-ui-sketchy"
+  },
+  "homepage": "https://github.com/beerose/theme-ui-sketchy#readme",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -11,9 +23,14 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "dev": "microbundle watch",
+    "build:microbundle": "microbundle --no-compress --tsconfig tsconfig.lib.json"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "theme-ui": "0.4.0-alpha.0"
+  },
+  "devDependencies": {
     "@mdx-js/mdx": "1.5.7",
     "@mdx-js/react": "1.5.9",
     "@theme-ui/presets": "0.4.0-alpha.0",
@@ -25,17 +42,15 @@
     "gatsby-plugin-theme-ui": "0.3.0",
     "gatsby-plugin-typescript": "2.3.5",
     "gatsby-source-filesystem": "2.1.55",
+    "microbundle": "^0.12.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "6.0.0",
-    "theme-ui": "0.4.0-alpha.0"
-  },
-  "devDependencies": {
-    "prettier": "^1.19.1"
+    "react-helmet": "6.0.0"
   },
   "keywords": [
-    "react",
-    "mdx",
-    "gatsby"
+    "css",
+    "theme-ui",
+    "preset",
+    "sketchy"
   ]
 }

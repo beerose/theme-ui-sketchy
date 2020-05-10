@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+dist/
+package/
+
 # Mac files
 .DS_Store
 
