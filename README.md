@@ -6,6 +6,8 @@
 
 For detailed specification check out [the demo page](https://themeui-sketchy.netlify.app/).
 
+Or try it out in [CodeSandbox](https://codesandbox.io/s/sketchy-theme-ui-demo-6mywo?file=/src/App.js).
+
 ## 💥 Installation
 
 ```sh
@@ -17,29 +19,36 @@ npm i theme-ui-sketchy-preset # yarn add theme-ui-sketchy-preset
 This library exports the theme object complaiant with [Theme UI theme specification](https://styled-system.com/theme-specification/) that can be passed to your theme provider.
 
 ```tsx
-import { ThemeProvider } from 'theme-ui'
-import sketchy from 'theme-ui-sketchy-preset'
+import { ThemeProvider } from "theme-ui"
+import sketchy from "theme-ui-sketchy-preset"
 
 const App = props => (
-    <ThemeProvider theme={sketchy}>
-        {props.children}
-    </ThemeProvider>
+  <ThemeProvider theme={sketchy}>{props.children}</ThemeProvider>
 )
 ```
 
 It can be also extended or modified:
 
 ```ts
-import sketchy from 'theme-ui-sketchy-preset'
+import sketchy from "theme-ui-sketchy-preset"
 
 const myTheme = {
-    ...sketchy,
-    colors: {
-        text: '#000',
-        background: '#fff',
-        primary: '#33e',
-    },
+  ...sketchy,
+  colors: {
+    text: "#000",
+    background: "#fff",
+    primary: "#33e",
+  },
 }
+```
+
+This preset uses _Architects Daughter_ font, so you need to copy this code into the `<head>` of your HTML document:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Architects+Daughter"
+/>
 ```
 
 ## 🚀 Development quick start

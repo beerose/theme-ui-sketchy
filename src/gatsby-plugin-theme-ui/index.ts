@@ -115,28 +115,17 @@ const theme: ThemeSketchy = {
       my: 4,
       borderCollapse: "separate",
       borderSpacing: 0,
-      "th,td": {
-        textAlign: "left",
-        py: "4px",
-        pr: "4px",
-        pl: 0,
-        borderRadius: "sketchy1",
-        ...borderStyles,
-        borderBottomStyle: "solid",
-      },
-      th: {
-        borderRadius: "sketchy3",
-      },
     },
     th: {
-      borderRadius: "sketchy1",
-      verticalAlign: "bottom",
+      ...borderStyles,
+      borderRadius: "sketchy3",
       borderBottomWidth: "1px",
+      p: 2,
     },
     td: {
+      ...borderStyles,
       borderRadius: "sketchy1",
-      verticalAlign: "top",
-      borderBottomWidth: "1px",
+      p: 2,
     },
     hr: {
       border: 0,
