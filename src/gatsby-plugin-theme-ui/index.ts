@@ -25,6 +25,12 @@ const formStyles = {
   },
 }
 
+const alertStyles = {
+  border: "thick",
+  color: "text",
+  borderRadius: "sketchy0",
+}
+
 interface ThemeSketchy extends Theme {
   cards: SystemStyleObject
   links: SystemStyleObject
@@ -75,7 +81,8 @@ const theme: ThemeSketchy = {
     circle: "200px 185px 160px / 195px 160px",
   },
   borders: {
-    default: "2px solid var(--theme-ui-colors-text, black)",
+    thick: "2px solid var(--theme-ui-colors-text, black)",
+    thin: "1px solid var(--theme-ui-colors-text, black)",
   },
   styles: {
     root: {
@@ -108,25 +115,23 @@ const theme: ThemeSketchy = {
       color: "blueDark",
     },
     table: {
-      width: "100%",
-      my: 4,
       borderCollapse: "separate",
       borderSpacing: 0,
     },
     th: {
-      border: "default",
+      border: "thick",
       borderRadius: "sketchy3",
       borderBottomWidth: "1px",
       p: 2,
     },
     td: {
-      border: "default",
+      border: "thick",
       borderRadius: "sketchy1",
       p: 2,
     },
     hr: {
       border: 0,
-      borderBottom: (theme: Theme) => `1px solid ${theme!.colors!.text}`,
+      borderBottom: "thin",
     },
     img: {
       maxWidth: "100%",
@@ -159,11 +164,8 @@ const theme: ThemeSketchy = {
     primary: {
       color: "text",
       borderRadius: "sketchy1",
-      transition: "all 235ms ease 0s",
       boxShadow: "15px 24px 25px -18px rgba(0,0,0,.4)",
-      borderWidth: "2px",
-      borderStyle: "solid",
-      borderColor: "text",
+      border: "thick",
       fontFamily: "inherit",
     },
   },
@@ -203,7 +205,7 @@ const theme: ThemeSketchy = {
     checkbox: {
       color: "text",
       borderRadius: "sketchy1",
-      border: (theme: Theme) => `1px solid ${theme!.colors!.text}`,
+      border: (theme: Theme) => `1px solid ${theme.colors!.text}`,
       ...{
         "> path": {
           d: "path('')",
@@ -218,7 +220,7 @@ const theme: ThemeSketchy = {
         },
         "input:focus ~ &": {
           background: "transparent",
-          border: (theme: Theme) => `2px solid ${theme!.colors!.text}`,
+          border: (theme: Theme) => `2px solid ${theme.colors!.text}`,
           "> path": {
             strokeWidth: 2,
           },
@@ -261,60 +263,44 @@ const theme: ThemeSketchy = {
   },
   alerts: {
     danger: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "primary",
       backgroundColor: "primaryLight",
     },
     info: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "blueDark",
       backgroundColor: "blue",
     },
     warning: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "yellowDark",
       backgroundColor: "yellow",
     },
     success: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "greenDark",
       backgroundColor: "green",
     },
   },
   messages: {
     danger: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "primary",
       backgroundColor: "primaryLight",
     },
     info: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "blueDark",
       backgroundColor: "blue",
     },
     warning: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "yellowDark",
       backgroundColor: "yellow",
     },
     success: {
-      border: "default",
-      color: "text",
-      borderRadius: "sketchy0",
+      ...alertStyles,
       borderColor: "greenDark",
       backgroundColor: "green",
     },
