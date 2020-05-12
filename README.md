@@ -1,4 +1,4 @@
-![npm bundle size](https://img.shields.io/bundlephobia/min/theme-ui-sketchy-preset) ![npm](https://img.shields.io/npm/v/theme-ui-sketchy-preset)
+![npm](https://img.shields.io/npm/v/theme-ui-sketchy-preset)
 
 # Theme UI Sketchy Preset
 
