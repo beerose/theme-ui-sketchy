@@ -2,7 +2,7 @@
   "name": "theme-ui-sketchy-preset",
   "private": false,
   "description": "Theme UI Sketchy Preset",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/gatsby-plugin-theme-ui/index.ts",
