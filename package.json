@@ -27,7 +27,7 @@
     "dev": "microbundle watch",
     "build:microbundle": "microbundle --no-compress --tsconfig tsconfig.lib.json"
   },
-  "peerDependencies": {
+  "dependencies": {
     "theme-ui": "0.4.0-alpha.0"
   },
   "devDependencies": {
