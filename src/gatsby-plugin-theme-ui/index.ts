@@ -25,12 +25,6 @@ const formStyles = {
   },
 }
 
-const borderStyles = {
-  borderWidth: "2px",
-  borderStyle: "solid",
-  borderColor: "text",
-}
-
 interface ThemeSketchy extends Theme {
   cards: SystemStyleObject
   links: SystemStyleObject
@@ -80,6 +74,9 @@ const theme: ThemeSketchy = {
     sketchy4: "80px 15px 105px / 25px 250px",
     circle: "200px 185px 160px / 195px 160px",
   },
+  borders: {
+    default: "2px solid var(--theme-ui-colors-text, black)",
+  },
   styles: {
     root: {
       fontFamily: "body",
@@ -117,13 +114,13 @@ const theme: ThemeSketchy = {
       borderSpacing: 0,
     },
     th: {
-      ...borderStyles,
+      border: "default",
       borderRadius: "sketchy3",
       borderBottomWidth: "1px",
       p: 2,
     },
     td: {
-      ...borderStyles,
+      border: "default",
       borderRadius: "sketchy1",
       p: 2,
     },
@@ -264,28 +261,28 @@ const theme: ThemeSketchy = {
   },
   alerts: {
     danger: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "primary",
       backgroundColor: "primaryLight",
     },
     info: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "blueDark",
       backgroundColor: "blue",
     },
     warning: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "yellowDark",
       backgroundColor: "yellow",
     },
     success: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "greenDark",
@@ -294,28 +291,28 @@ const theme: ThemeSketchy = {
   },
   messages: {
     danger: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "primary",
       backgroundColor: "primaryLight",
     },
     info: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "blueDark",
       backgroundColor: "blue",
     },
     warning: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "yellowDark",
       backgroundColor: "yellow",
     },
     success: {
-      ...borderStyles,
+      border: "default",
       color: "text",
       borderRadius: "sketchy0",
       borderColor: "greenDark",
