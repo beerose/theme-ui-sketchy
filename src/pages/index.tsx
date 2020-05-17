@@ -44,8 +44,15 @@ export default () => {
           "*": {
             transition: "all .2s ease-out",
           },
+          pt: 20,
         }}
       >
+        <Styled.a
+          sx={{ fontSize: "130%" }}
+          href="https://github.com/beerose/theme-ui-sketchy"
+        >
+          GitHub
+        </Styled.a>
         <Styled.root>
           <Styled.h1 sx={{ textAlign: "center", fontSize: "3em" }}>
             Sketchy Theme UI Preset

@@ -1,62 +1,54 @@
-import { Theme, SystemStyleObject } from "theme-ui"
+import { Theme, SystemStyleObject } from "@theme-ui/css"
 
-const buttonStyles = {
-  color: "text",
-  backgroundColor: "gray",
-  borderRadius: "sketchy0",
-  transition: "all 235ms ease 0s",
-  boxShadow: "15px 24px 25px -18px rgba(0,0,0,.4)",
-  borderWidth: "2px",
-  borderStyle: "solid",
-  borderColor: "text",
-  fontFamily: "inherit",
-  "&:hover": {
-    boxShadow: "2px 8px 10px -6px rgba(0,0,0,.4)",
-  },
-}
-
-const formStyles = {
-  borderRadius: "sketchy3",
-  borderColor: "text",
-  fontFamily: "inherit",
-  "&:focus": {
-    boxShadow: "0 0 0px 1px black",
-    outline: "none",
-  },
-}
-
-const alertStyles = {
-  border: "thick",
-  color: "text",
-  borderRadius: "sketchy0",
-}
-
-interface ThemeSketchy extends Theme {
+export interface ThemeSketchy extends Theme {
   cards: SystemStyleObject
   links: SystemStyleObject
   forms: Record<string, SystemStyleObject>
-  progress: SystemStyleObject
-  donut: SystemStyleObject
   badges: SystemStyleObject
   alerts: SystemStyleObject
   messages: SystemStyleObject
 }
 
+const defaultBorderStyles: SystemStyleObject = {
+  border: "thick",
+  color: "text",
+  borderRadius: "sketchy0",
+}
+
+const buttonStyles = {
+  ...defaultBorderStyles,
+  bg: "muted",
+  boxShadow: "default",
+  fontFamily: "inherit",
+  "&:hover": {
+    boxShadow: "hover",
+  },
+}
+
+const formStyles: SystemStyleObject = {
+  borderRadius: "sketchy3",
+  borderColor: "text",
+  fontFamily: "inherit",
+  "&:focus": {
+    boxShadow: "outline",
+    outline: "none",
+  },
+}
+
 const theme: ThemeSketchy = {
   colors: {
-    text: "rgba(0,0,0,0.9)",
-    background: "hsl(10, 10%, 98%)",
-    gray: "rgba(0,0,0,0.1)",
+    text: "#000200",
+    background: "#FAFAF9",
+    muted: "rgba(0,0,0,.1)",
     primary: "#F25F5C",
-    primaryDark: "#b51916",
+    primaryDark: "#B51916",
     primaryLight: "#FCBAB1",
-    blue: "#b6dee2",
-    blueDark: "#247ba0",
-    highlight: "hsl(10, 40%, 90%)",
+    blue: "#B6DEE2",
+    blueDark: "#247BA0",
     greenDark: "#2D5948",
-    green: "#b2e4dc",
-    yellowDark: "#ffda3a",
-    yellow: "#ffe36961",
+    green: "#B2E4DC",
+    yellowDark: "#FFDA3A",
+    yellow: "#FCF5C7",
   },
   fonts: {
     body:
@@ -84,11 +76,15 @@ const theme: ThemeSketchy = {
     thick: "2px solid var(--theme-ui-colors-text, black)",
     thin: "1px solid var(--theme-ui-colors-text, black)",
   },
+  shadows: {
+    outline: "0 0 0px 1px black rgba(0,0,0,.4)",
+    default: "15px 24px 25px -18px rgba(0,0,0,.4)",
+    hover: "2px 8px 10px -6px rgba(0,0,0,.4)",
+  },
   styles: {
     root: {
       fontFamily: "body",
       lineHeight: "body",
-      fontWeight: "body",
     },
     a: {
       color: "primary",
@@ -97,14 +93,12 @@ const theme: ThemeSketchy = {
       },
     },
     pre: {
-      variant: "prism",
       fontFamily: "monospace",
       fontSize: 1,
       p: 3,
       color: "text",
-      bg: "gray",
+      bg: "muted",
       overflow: "auto",
-      borderRadius: "sketchy1",
     },
     code: {
       fontFamily: "monospace",
@@ -164,7 +158,7 @@ const theme: ThemeSketchy = {
     primary: {
       color: "text",
       borderRadius: "sketchy1",
-      boxShadow: "15px 24px 25px -18px rgba(0,0,0,.4)",
+      boxShadow: "default",
       border: "thick",
       fontFamily: "inherit",
     },
@@ -174,20 +168,16 @@ const theme: ThemeSketchy = {
     select: formStyles,
     textarea: formStyles,
     slider: {
-      borderRadius: "sketchy1",
-      bg: "gray",
-    },
-    primaryLightSlider: {
-      color: "text",
+      bg: "muted",
     },
     radio: {
       bg: "transparent",
-      border: (theme: Theme) => `1px solid ${theme!.colors!.text}`,
+      border: "thin",
       borderRadius: "circle",
       ...{
         "input:focus ~ &": {
-          background: "transparent",
-          border: (theme: Theme) => `2px solid ${theme!.colors!.text}`,
+          bg: "transparent",
+          border: "thick",
         },
         "> path": {
           fill: "none",
@@ -205,7 +195,7 @@ const theme: ThemeSketchy = {
     checkbox: {
       color: "text",
       borderRadius: "sketchy1",
-      border: (theme: Theme) => `1px solid ${theme.colors!.text}`,
+      border: "thin",
       ...{
         "> path": {
           d: "path('')",
@@ -220,7 +210,7 @@ const theme: ThemeSketchy = {
         },
         "input:focus ~ &": {
           background: "transparent",
-          border: (theme: Theme) => `2px solid ${theme.colors!.text}`,
+          border: "thick",
           "> path": {
             strokeWidth: 2,
           },
@@ -238,15 +228,9 @@ const theme: ThemeSketchy = {
       textTransform: "uppercase",
       letterSpacing: "0.2em",
       "&:hover": {
-        backgroundColor: "primaryLight",
+        bg: "primaryLight",
       },
     },
-  },
-  progress: {
-    color: "primary",
-  },
-  donut: {
-    color: "primary",
   },
   badges: {
     primary: {
@@ -263,44 +247,44 @@ const theme: ThemeSketchy = {
   },
   alerts: {
     danger: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "primary",
       backgroundColor: "primaryLight",
     },
     info: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "blueDark",
       backgroundColor: "blue",
     },
     warning: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "yellowDark",
       backgroundColor: "yellow",
     },
     success: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "greenDark",
       backgroundColor: "green",
     },
   },
   messages: {
     danger: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "primary",
       backgroundColor: "primaryLight",
     },
     info: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "blueDark",
       backgroundColor: "blue",
     },
     warning: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "yellowDark",
       backgroundColor: "yellow",
     },
     success: {
-      ...alertStyles,
+      ...defaultBorderStyles,
       borderColor: "greenDark",
       backgroundColor: "green",
     },
