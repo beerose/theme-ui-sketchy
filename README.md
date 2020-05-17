@@ -6,7 +6,7 @@
 <img width="500" alt="Screenshot 2020-04-28 at 21 13 52" src="https://user-images.githubusercontent.com/9019397/81507987-6fe8ce80-9301-11ea-8943-d385e5b9e5f9.png">
 <p>
 
-For detailed specification check out [the demo page](https://themeui-sketchy.netlify.app/).
+For detailed specifications check out [the demo page](https://themeui-sketchy.netlify.app/).
 
 Or try it out in [CodeSandbox](https://codesandbox.io/s/sketchy-theme-ui-demo-6mywo?file=/src/App.js).
 
@@ -18,7 +18,7 @@ npm i theme-ui-sketchy-preset # yarn add theme-ui-sketchy-preset
 
 ## 🙇‍♀️ Usage
 
-This library exports the theme object complaiant with [Theme UI theme specification](https://styled-system.com/theme-specification/) that can be passed to your theme provider.
+This library exports the theme object compliant with [Theme UI theme specification](https://styled-system.com/theme-specification/) that can be passed to your theme provider.
 
 ```tsx
 import { ThemeProvider } from "theme-ui"
@@ -89,7 +89,7 @@ A quick look at the top-level files and directories you'll see in this Gatsby pr
     ├── package.json
     └── README.md
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) and are automatically installed.
 
 2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site.
 
