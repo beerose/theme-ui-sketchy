@@ -21,7 +21,7 @@ const ThemeJson = () => {
       sx={{
         width: "100%",
         fontFamily: "monospace",
-        bg: "highlight",
+        bg: "muted",
         p: 2,
         border: 0,
         borderRadius: "sketchy3",
