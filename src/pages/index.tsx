@@ -32,7 +32,7 @@ const ThemeJson = () => {
 
 export default () => {
   return (
-    <div>
+    <div style={{ width: "100%", display: "flex" }}>
       <Helmet>
         <link
           rel="stylesheet"
@@ -44,7 +44,7 @@ export default () => {
           "*": {
             transition: "all .2s ease-out",
           },
-          pt: 20,
+          p: 30,
         }}
       >
         <Styled.a
