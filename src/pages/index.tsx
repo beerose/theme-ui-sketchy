@@ -41,9 +41,6 @@ export default () => {
       </Helmet>
       <Container
         sx={{
-          "*": {
-            transition: "all .2s ease-out",
-          },
           p: 30,
         }}
       >
