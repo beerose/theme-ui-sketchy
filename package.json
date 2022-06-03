@@ -38,7 +38,7 @@
     "@types/mdx-js__react": "^1.5.1",
     "@types/react-helmet": "^5.0.15",
     "gatsby": "2.19.43",
-    "gatsby-plugin-mdx": "1.0.82",
+    "gatsby-plugin-mdx": "2.14.1",
     "gatsby-plugin-theme-ui": "0.3.0",
     "gatsby-plugin-typescript": "2.3.5",
     "gatsby-source-filesystem": "2.1.55",
